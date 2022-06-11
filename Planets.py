@@ -66,7 +66,7 @@ def logic(p, dt):#planets
                
                 a = d / distD * F / j.mass #Normalise distance vector and then scale to Fg, then use F = ma to get a
                 j.velocity += a * dt
-                j.pos += j.velocity * dt#Semi-Implicit Euler
+                j.pos += j.velocity * dt #Semi-Implicit Euler
                 
             
 
@@ -113,7 +113,7 @@ def process():
             pygame.draw.circle(screen, i.color, (i.pos.x, i.pos.y), i.displayRadius)
 
         #Update
-        pygame.display.update()
+        pygame.display.flip()
 
 if __name__ == "__main__":
     process()
